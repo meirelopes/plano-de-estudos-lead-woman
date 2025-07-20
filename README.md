@@ -268,6 +268,6 @@ curl --request POST \
 
 ---
 
-**Autora:** Meire Lopes
-**Mentora:** 
-**Data de início:** 19/07/2025
+- **Autora:** Meire Lopes
+- **Mentora:** Itala Samara Da Silva Cordeiro
+- **Data de início:** 25/06/2025
