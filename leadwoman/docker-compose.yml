@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      - "4566:4566"        # Porta principal (Edge service)
+      - "4571:4571"        # Porta para debug (opcional)
+    environment:
+      - SERVICES=sqs,sns,lambda,dynamodb,apigateway
+      - DEBUG=1
+      - DATA_DIR=/tmp/localstack/data
+      - LAMBDA_EXECUTOR=docker-reuse
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+
